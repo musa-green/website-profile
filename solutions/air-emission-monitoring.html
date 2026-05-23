@@ -56,8 +56,49 @@
     <div class="actions">
       <a class="btn btn-primary" href="mailto:hello@musagreen.com"><i class="fas fa-paper-plane"></i>Get started</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
   </div>
 </header>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav-overlay" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="mobile-nav-panel">
+    <button class="mobile-nav-close" id="navClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    <div class="mobile-nav-section">Solutions</div>
+    <a href="air-emission-monitoring.html"><i class="fas fa-smog"></i>Air Emission Monitoring</a>
+    <a href="wastewater-monitoring.html"><i class="fas fa-water"></i>Wastewater Monitoring</a>
+    <a href="air-quality-monitoring.html"><i class="fas fa-wind"></i>Air Quality Monitoring</a>
+    <a href="carbon-accounting.html"><i class="fas fa-leaf"></i>Carbon Accounting</a>
+    <a href="sustainability-report.html"><i class="fas fa-file-alt"></i>Sustainability Report</a>
+    <a href="water-assessment.html"><i class="fas fa-tint"></i>Water Assessment</a>
+    <div class="mobile-nav-section">Products</div>
+    <a href="../products/musa-integrator.html"><i class="fas fa-microchip"></i>MUSA Integrator</a>
+    <a href="../products/musa-data-management.html"><i class="fas fa-database"></i>MUSA Data Management</a>
+    <a href="../products/musa-view.html"><i class="fas fa-chart-line"></i>MUSA View</a>
+    <a href="../products/musa-assistant.html"><i class="fas fa-robot"></i>MUSA Assistant</a>
+    <div class="mobile-nav-section">Company</div>
+    <a href="../articles/index.html"><i class="fas fa-newspaper"></i>Articles</a>
+    <a href="../about.html"><i class="fas fa-info-circle"></i>About</a>
+    <div class="mobile-nav-cta">
+      <a class="btn btn-primary" href="mailto:hello@musagreen.com"><i class="fas fa-paper-plane"></i>Get started</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var overlay = document.getElementById('mobileNav');
+  var close = document.getElementById('navClose');
+  function open() { overlay.classList.add('open'); toggle.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function shut() { overlay.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  toggle.addEventListener('click', open);
+  close.addEventListener('click', shut);
+  overlay.addEventListener('click', function(e){ if(e.target===overlay) shut(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') shut(); });
+})();
+</script>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
