@@ -890,6 +890,7 @@
 
     <div class="pipeline">
       <div class="step">
+        <div class="step-ico"><i class="fas fa-microchip"></i></div>
         <div class="n">01 · Edge</div>
         <h4>MUSA Integrator</h4>
         <p>Mini-PC data logger on-site. Talks to every sensor and instrument; monitors its own health.</p>
@@ -897,6 +898,7 @@
         <div class="arrow"><i class="fas fa-chevron-right"></i></div>
       </div>
       <div class="step">
+        <div class="step-ico"><i class="fas fa-database"></i></div>
         <div class="n">02 · Warehouse</div>
         <h4>MUSA Data Management</h4>
         <p>Environmental, energy and operations data in one centralised warehouse. Cloud or on-premise.</p>
@@ -904,6 +906,7 @@
         <div class="arrow"><i class="fas fa-chevron-right"></i></div>
       </div>
       <div class="step">
+        <div class="step-ico"><i class="fas fa-chart-line"></i></div>
         <div class="n">03 · Platform</div>
         <h4>MUSA View</h4>
         <p>All-in-one BI: monitor, model and analyse. The Environmental &amp; Energy Digital Twin lives here.</p>
@@ -911,6 +914,7 @@
         <div class="arrow"><i class="fas fa-chevron-right"></i></div>
       </div>
       <div class="step">
+        <div class="step-ico"><i class="fas fa-robot"></i></div>
         <div class="n">04 · Agent</div>
         <h4>MUSA Assistant</h4>
         <p>Personal AI agent over Chat and Email. Sends alerts, answers questions, summarises trends.</p>
@@ -974,7 +978,7 @@
       <div>
         <span class="eyebrow" style="color:var(--teal)">Get started</span>
         <h2 style="margin-top:10px">Choose your sensors. We manage the rest.</h2>
-        <p>We get your system live in under a week. Start your free trial."</p>
+        <p>We get your system live in under a week. Start your free trial!</p>
       </div>
       <div class="actions">
         <a class="btn btn-dark" href="mailto:admin@musagreen.com"><i class="fas fa-envelope"></i>Email our team</a>
@@ -1052,18 +1056,51 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="assets/hero3d.js"></script>
 
-<!-- Platform-preview tab switcher -->
+<!-- Platform-preview tab switcher + auto-rotation -->
 <script>
   (function(){
-    const tabs = document.querySelectorAll('.pm-view-tabs button');
-    const panels = document.querySelectorAll('.pm[data-view]');
-    tabs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const view = btn.dataset.view;
-        tabs.forEach(b => b.classList.toggle('active', b === btn));
-        panels.forEach(p => p.classList.toggle('hidden', p.dataset.view !== view));
+    const INTERVAL = 5000; // ms per tab
+    const tabWrap  = document.querySelector('.pm-view-tabs');
+    const tabs     = document.querySelectorAll('.pm-view-tabs button');
+    const panels   = document.querySelectorAll('.pm[data-view]');
+    const views    = Array.from(tabs).map(b => b.dataset.view);
+    let current    = 0;
+    let timer      = null;
+
+    function activate(index, userTriggered) {
+      // Restart CSS progress animation by toggling active off then on
+      tabs.forEach((b, i) => {
+        if (i === index) {
+          b.classList.remove('active');
+          void b.offsetWidth; // force reflow so animation restarts
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
       });
+      panels.forEach(p => p.classList.toggle('hidden', p.dataset.view !== views[index]));
+      current = index;
+
+      if (userTriggered) {
+        clearInterval(timer);
+        timer = null;
+        tabWrap.classList.add('pm-tabs--paused');
+      }
+    }
+
+    function autoNext() {
+      activate((current + 1) % views.length, false);
+    }
+
+    function startAuto() {
+      timer = setInterval(autoNext, INTERVAL);
+    }
+
+    tabs.forEach((btn, i) => {
+      btn.addEventListener('click', () => activate(i, true));
     });
+
+    startAuto();
   })();
 </script>
 
