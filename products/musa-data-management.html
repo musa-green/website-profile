@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MUSA Data Management - Cloud / On-Prem Data Warehouse | MUSA Green</title>
+<meta name="description" content="Environmental data warehouse for IoT telemetry. Hot/warm/cold storage tiers. REST & GraphQL APIs. The single source of truth between sensors and platforms." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<link rel="stylesheet" href="../assets/style.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "MUSA Data Management",
+  "description": "Cloud and on-prem data warehouse for environmental IoT telemetry. Hot/warm/cold storage tiers. REST & GraphQL APIs. The single source of truth between sensors and platforms.",
+  "brand": { "@type": "Brand", "name": "MUSA Green" },
+  "category": "Environmental Data Warehouse"
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="topbar" id="topbar">
+  <div class="container row">
+    <a href="../index.html" class="brand" aria-label="MUSA Green home"><img src="../assets/logo.png" alt="MUSA Green" class="brand-logo" /></a>
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-item">
+        <a class="nav-link" href="../solutions/index.html">Solutions <i class="fas fa-chevron-down chev"></i></a>
+        <div class="dropdown" role="menu">
+          <a href="../solutions/air-emission-monitoring.html"><i class="fas fa-smog"></i><span>Air Emission Monitoring<small>SISPEK - Stack CEMS</small></span></a>
+          <a href="../solutions/wastewater-monitoring.html"><i class="fas fa-water"></i><span>Wastewater Monitoring<small>SPARING - Discharge points</small></span></a>
+          <a href="../solutions/air-quality-monitoring.html"><i class="fas fa-wind"></i><span>Air Quality Monitoring<small>ISPU - Ambient AQMS</small></span></a>
+          <a href="../solutions/carbon-accounting.html"><i class="fas fa-leaf"></i><span>Carbon Accounting<small>CDP - Scope 1/2/3</small></span></a>
+          <a href="../solutions/sustainability-report.html"><i class="fas fa-file-alt"></i><span>Sustainability Report<small>GRI · PROPER</small></span></a>
+          <a href="../solutions/water-assessment.html"><i class="fas fa-tint"></i><span>Water Assessment<small>WRA blueprint</small></span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="index.html">Products <i class="fas fa-chevron-down chev"></i></a>
+        <div class="dropdown" role="menu">
+          <a href="musa-integrator.html"><i class="fas fa-microchip"></i><span>MUSA Integrator<small>On-site data logger</small></span></a>
+          <a href="musa-data-management.html"><i class="fas fa-database"></i><span>MUSA Data Management<small>Cloud / On-prem warehouse</small></span></a>
+          <a href="musa-view.html"><i class="fas fa-chart-line"></i><span>MUSA View<small>Environmental Digital Twin</small></span></a>
+          <a href="musa-assistant.html"><i class="fas fa-robot"></i><span>MUSA Assistant<small>Personal AI agent</small></span></a>
+        </div>
+      </div>
+      <a class="nav-link" href="../articles/index.html">Articles</a>
+      <a class="nav-link" href="../about.html">About</a>
+    </nav>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:admin@musagreen.com"><i class="fas fa-paper-plane"></i>Get started</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav-overlay" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="mobile-nav-panel">
+    <button class="mobile-nav-close" id="navClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    <div class="mobile-nav-section">Solutions</div>
+    <a href="../solutions/air-emission-monitoring.html"><i class="fas fa-smog"></i>Air Emission Monitoring</a>
+    <a href="../solutions/wastewater-monitoring.html"><i class="fas fa-water"></i>Wastewater Monitoring</a>
+    <a href="../solutions/air-quality-monitoring.html"><i class="fas fa-wind"></i>Air Quality Monitoring</a>
+    <a href="../solutions/carbon-accounting.html"><i class="fas fa-leaf"></i>Carbon Accounting</a>
+    <a href="../solutions/sustainability-report.html"><i class="fas fa-file-alt"></i>Sustainability Report</a>
+    <a href="../solutions/water-assessment.html"><i class="fas fa-tint"></i>Water Assessment</a>
+    <div class="mobile-nav-section">Products</div>
+    <a href="musa-integrator.html"><i class="fas fa-microchip"></i>MUSA Integrator</a>
+    <a href="musa-data-management.html"><i class="fas fa-database"></i>MUSA Data Management</a>
+    <a href="musa-view.html"><i class="fas fa-chart-line"></i>MUSA View</a>
+    <a href="musa-assistant.html"><i class="fas fa-robot"></i>MUSA Assistant</a>
+    <div class="mobile-nav-section">Company</div>
+    <a href="../articles/index.html"><i class="fas fa-newspaper"></i>Articles</a>
+    <a href="../about.html"><i class="fas fa-info-circle"></i>About</a>
+    <div class="mobile-nav-cta">
+      <a class="btn btn-primary" href="mailto:admin@musagreen.com"><i class="fas fa-paper-plane"></i>Get started</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var overlay = document.getElementById('mobileNav');
+  var close = document.getElementById('navClose');
+  function open() { overlay.classList.add('open'); toggle.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function shut() { overlay.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  toggle.addEventListener('click', open);
+  close.addEventListener('click', shut);
+  overlay.addEventListener('click', function(e){ if(e.target===overlay) shut(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') shut(); });
+})();
+</script>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div>
+      <div class="breadcrumb"><a href="../index.html">Home</a><i class="fas fa-chevron-right"></i><a href="index.html">Products</a><i class="fas fa-chevron-right"></i><span>MUSA Data Management</span></div>
+      <span class="reg-badge"><i class="fas fa-database"></i> Warehouse · 02 of 04</span>
+      <h1>The warehouse that never forgets.</h1>
+      <p class="lead">Store, organise, back up, and serve every sensor reading across your estate. Cloud or on-prem. Hot, warm and cold tiers. REST and GraphQL APIs. The single source of truth between your sensors and every platform that queries them.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:admin@musagreen.com"><i class="fas fa-paper-plane"></i>Book a demo</a>
+        <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.25)" href="#features"><i class="fas fa-list"></i>See features</a>
+      </div>
+    </div>
+
+    <!-- Data warehouse visual -->
+    <div class="hero-shot" style="background:#0A2C3E;padding:14px" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Data dashboard visualization" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.85;" />
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="section">
+  <div class="container two-col">
+    <aside>
+      <span class="eyebrow">Overview</span>
+      <h2>The single source of truth between sensors and platforms.</h2>
+    </aside>
+    <div class="body">
+      <p class="text-lead">MUSA Data Management is the data warehouse that sits at the center of the MUSA pipeline. The Integrator pushes data here; View, Assistant, and analytics workloads pull from it. It is the single source of truth — every sensor reading, every calibration event, every submission receipt — stored, indexed, and available through APIs.</p>
+      <p>Deploy it as a managed cloud instance on GCP or Tencent Cloud, or run it on-premise for estates with air-gapped or low-latency requirements. The warehouse is regulation-aware out of the box: KLHK retention periods, audit logging, and data-lineage tracking are built in — not bolted on.</p>
+      <p>Every solution in the MUSA catalogue — <strong>SISPEK stack emissions, SPARING wastewater, ISPU ambient air, carbon ledgers</strong> — lands in Data Management first. From there, it is queried by View dashboards, Assistant agents, and third-party BI tools through the same REST and GraphQL endpoints.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section section--soft" id="features">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Features</span>
+      <h2>Built for environmental telemetry at scale.</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="copy">
+          <h3>Time-series optimised storage</h3>
+          <p>Columnar storage engine optimised for environmental telemetry. Sub-second queries over billions of readings. Automatic partitioning by site, sensor, and time.</p>
+          <ul><li>Columnar compression reduces storage footprint by up to 90%</li><li>Automatic partitioning by site, sensor type and time range</li><li>Sub-second queries over billions of records</li></ul>
+        </div>
+        <div class="shot"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Data analytics visualization" style="width:100%;height:100%;object-fit:cover;" /></div>
+      </div>
+
+      <div class="feat-card">
+        <div class="copy">
+          <h3>Hot / warm / cold tiering</h3>
+          <p>Hot tier keeps 18 months of full-resolution data. Warm tier rolls up to 5-minute aggregates for 5 years. Cold tier archives hourly data for 10+ years. Fully automatic lifecycle management.</p>
+          <ul><li>Hot: 18 months full resolution (1-second to 1-minute)</li><li>Warm: 5 years at 5-minute roll-ups</li><li>Cold: 10+ year compliance archive at hourly</li></ul>
+        </div>
+        <div class="shot"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80" alt="Energy and infrastructure" style="width:100%;height:100%;object-fit:cover;" /></div>
+      </div>
+
+      <div class="feat-card">
+        <div class="copy">
+          <h3>REST &amp; GraphQL APIs</h3>
+          <p>Query any time range, any sensor, any site. REST for simple reads; GraphQL for complex, nested queries. Rate-limited, authenticated, auditable. MUSA View and Assistant are built on these APIs.</p>
+          <ul><li>REST v2 for straightforward time-series reads</li><li>GraphQL for multi-sensor, cross-site nested queries</li><li>Rate limiting, API key management, full audit trail</li></ul>
+        </div>
+        <div class="shot"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80" alt="Code and data" style="width:100%;height:100%;object-fit:cover;" /></div>
+      </div>
+
+      <div class="feat-card">
+        <div class="copy">
+          <h3>Backup, restore &amp; disaster recovery</h3>
+          <p>Continuous replication to a secondary region. Point-in-time recovery for any window. Automated integrity checks. KLHK requires 3-year retention — we archive 10+.</p>
+          <ul><li>Cross-region asynchronous replication</li><li>Point-in-time recovery for any timestamp window</li><li>Automated daily integrity checks with alerting</li></ul>
+        </div>
+        <div class="shot"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="Data protection and security" style="width:100%;height:100%;object-fit:cover;" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH SPECS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Technical specs</span>
+      <h2>Under the hood.</h2>
+    </div>
+    <table class="spec-table">
+      <tr><td>Deployment</td><td>Managed cloud (GCP / Tencent) · Private cloud · On-prem (VM or bare-metal)</td></tr>
+      <tr><td>Storage engine</td><td>Columnar time-series (custom) · Relational metadata (PostgreSQL)</td></tr>
+      <tr><td>Ingestion</td><td>MQTT · HTTPS/REST · OPC-UA · Batch CSV/IMPORT</td></tr>
+      <tr><td>Query APIs</td><td>REST v2 · GraphQL · SQL (analytics workspace)</td></tr>
+      <tr><td>Retention (hot)</td><td>18 months full resolution</td></tr>
+      <tr><td>Retention (warm)</td><td>5 years at 5-min roll-ups</td></tr>
+      <tr><td>Retention (cold)</td><td>10+ years compliance archive</td></tr>
+      <tr><td>Replication</td><td>Cross-region async · RPO &lt; 5 min</td></tr>
+      <tr><td>Security</td><td>TLS 1.3 · AES-256 at rest · RBAC · SSO (SAML/OIDC) · Audit log</td></tr>
+      <tr><td>Compliance</td><td>GDPR-ready · Indonesian PDP Law compliant</td></tr>
+      <tr><td>Uptime SLA</td><td>99.95% (managed cloud)</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- RELATED SOLUTIONS -->
+<section class="section section--soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Works with</span>
+      <h2>Solutions whose data lands in MUSA Data Management.</h2>
+    </div>
+    <div class="related-grid">
+      <div class="rel-card">
+        <div class="ico" style="background:var(--teal-100);color:var(--teal-600)"><i class="fas fa-smog"></i></div>
+        <h4>Air Emission · SISPEK</h4>
+        <p>Stack CEMS telemetry warehoused and submission-ready.</p>
+        <a href="../solutions/air-emission-monitoring.html">Solution detail <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="rel-card">
+        <div class="ico" style="background:var(--teal-100);color:var(--teal-600)"><i class="fas fa-water"></i></div>
+        <h4>Wastewater · SPARING</h4>
+        <p>Outfall readings, water balance data, discharge compliance records.</p>
+        <a href="../solutions/wastewater-monitoring.html">Solution detail <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="rel-card">
+        <div class="ico" style="background:var(--teal-100);color:var(--teal-600)"><i class="fas fa-leaf"></i></div>
+        <h4>Carbon Accounting · CDP</h4>
+        <p>Emission factors, activity data and CDP calculations run here.</p>
+        <a href="../solutions/carbon-accounting.html">Solution detail <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>From provisioning to production in four steps.</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="copy">
+          <h3>1. Provision &amp; configure</h3>
+          <p>Cloud project setup, tenant creation, security policies, network peering (if on-prem). Storage tiers sized to your sensor count and ingestion rate. Done in days, not months.</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="copy">
+          <h3>2. Connect edge sources</h3>
+          <p>MUSA Integrator pairing, sensor registry population, data model mapping. Each stack, outfall, AQMS node and meter is registered with its metadata, location, and regulatory context.</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="copy">
+          <h3>3. Validate &amp; reconcile</h3>
+          <p>Data quality checks, gap detection, calibration metadata import. We reconcile the first 30 days of data against source records to confirm completeness and accuracy.</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="copy">
+          <h3>4. Operate &amp; scale</h3>
+          <p>Continuous monitoring, retention lifecycle management, quarterly compliance reconciliation. Add new sensors and sites without re-architecture. The warehouse grows with your estate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta-banner">
+      <div>
+        <span class="eyebrow" style="color:var(--teal)">Start with your sensor inventory</span>
+        <h2 style="margin-top:10px">A 30-minute architecture review, tailored to your estate.</h2>
+        <p>Send us your stack, outfall and AQMS inventory. We'll draft a Data Management deployment architecture — cloud, on-prem or hybrid — and walk through it with your team.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-dark" href="mailto:admin@musagreen.com"><i class="fas fa-envelope"></i>Email our team</a>
+        <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.3)" href="https://wa.me/6287882795313"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="MUSA Green" class="brand-logo" /></a>
+        <p class="brand-blurb">MUSA Green builds Industrial Digital Twin platforms for environmental compliance and ESG performance across Indonesia.</p>
+      </div>
+      <div>
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="../solutions/air-emission-monitoring.html">Air Emission · SISPEK</a></li>
+          <li><a href="../solutions/wastewater-monitoring.html">Wastewater · SPARING</a></li>
+          <li><a href="../solutions/air-quality-monitoring.html">Air Quality · ISPU</a></li>
+          <li><a href="../solutions/carbon-accounting.html">Carbon · CDP</a></li>
+          <li><a href="../solutions/sustainability-report.html">Sustainability · GRI</a></li>
+          <li><a href="../solutions/water-assessment.html">Water Assessment · WRA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Products</h5>
+        <ul>
+          <li><a href="musa-integrator.html">MUSA Integrator</a></li>
+          <li><a href="musa-data-management.html">MUSA Data Management</a></li>
+          <li><a href="musa-view.html">MUSA View</a></li>
+          <li><a href="musa-assistant.html">MUSA Assistant</a></li>
+          <li><a href="../articles/index.html">Articles</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <div class="contact">
+          <a href="mailto:admin@musagreen.com"><i class="fas fa-envelope"></i>admin@musagreen.com</a>
+          <a href="https://wa.me/6287882795313"><i class="fab fa-whatsapp"></i>+62 8788-279-5313</a>
+          <a href="#"><i class="fas fa-map-marker-alt"></i>Jakarta, Indonesia</a>
+          <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 MUSA Green. All rights reserved.</span>
+      <span>Industrial Digital Twin &middot; IoT &middot; ESG</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
