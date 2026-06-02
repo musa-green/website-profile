@@ -120,9 +120,9 @@ p  { margin: 0; }
 .nav a.nav-link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 14px; border-radius: 8px; font-weight: 500; font-size: 15px; color: var(--ink); }
 .nav a.nav-link:hover { background: var(--teal-100); }
 .nav-item .chev { font-size: 10px; opacity: .6; }
-.nav-item .dropdown { position: absolute; top: calc(100% + 8px); left: 0; min-width: 320px;
+.nav-item .dropdown { position: absolute; top: 100%; left: 0; min-width: 320px;
   background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow-md);
-  padding: 10px; display: none; }
+  padding: 18px 10px 10px; display: none; }
 .nav-item:hover .dropdown, .nav-item:focus-within .dropdown { display: block; }
 .nav-item .dropdown a { display: grid; grid-template-columns: 28px 1fr; gap: 12px; padding: 10px 12px; border-radius: 8px; color: var(--ink); align-items: start; }
 .nav-item .dropdown a:hover { background: var(--teal-100); }
