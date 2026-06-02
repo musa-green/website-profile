@@ -931,17 +931,18 @@ p  { margin: 0; }
    ========================================================= */
 
 /* ---- Page hero with breadcrumb ---- */
-.page-hero { background: linear-gradient(180deg, #062F41 0%, #0B3E54 100%); color: #E6F0F2; position: relative; overflow: hidden; }
+.page-hero { background: #548e9b; color: #FFFFFF; position: relative; overflow: hidden; }
 .page-hero::before { content: ""; position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-  background-size: 60px 60px; mask-image: radial-gradient(ellipse at 30% 50%, #000 30%, transparent 75%);
+  background: radial-gradient(800px 400px at 80% 10%, rgba(255,255,255,.16), transparent 60%),
+              radial-gradient(600px 300px at 10% 80%, rgba(6,47,65,.20), transparent 70%);
+  pointer-events: none;
 }
 .page-hero .container { padding-block: 72px; position: relative; z-index: 2; display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
-.breadcrumb { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: #88A8B2; margin-bottom: 18px; }
-.breadcrumb a { color: var(--teal); }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,255,255,.65); margin-bottom: 18px; }
+.breadcrumb a { color: #fff; }
 .breadcrumb i { font-size: 8px; opacity: .5; }
 .page-hero h1 { color: #fff; font-size: clamp(36px, 4.5vw, 56px); }
-.page-hero .lead { color: #B7CBD2; margin-top: 18px; max-width: 520px; font-size: 18px; }
+.page-hero .lead { color: rgba(255,255,255,.88); margin-top: 18px; max-width: 520px; font-size: 18px; }
 .page-hero .reg-badge { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px;
   background: rgba(84,142,155,.15); border: 1px solid rgba(84,142,155,.4); color: var(--teal); font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 22px; }
 .page-hero .actions { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
