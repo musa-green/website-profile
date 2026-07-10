@@ -1,347 +1,1388 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MUSA Integrator - On-Site Data Logger | MUSA Green</title>
-<meta name="description" content="Edge data logger for environmental telemetry. Connects to CEMS analysers, water quality probes, AQMS stations, energy meters. Works offline with store-and-forward buffering." />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>MUSA Integrator - On-Site Data Logger | MUSA Green</title>
+        <meta
+            name="description"
+            content="Edge data logger for environmental telemetry. Connects to CEMS analysers, water quality probes, AQMS stations, energy meters. Works offline with store-and-forward buffering."
+        />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-<link rel="stylesheet" href="../assets/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+        <link rel="stylesheet" href="../assets/style.css" />
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "MUSA Integrator",
-  "description": "On-site edge data logger for environmental telemetry. Connects to CEMS analysers, water quality probes, AQMS stations, energy meters. Works offline with store-and-forward.",
-  "brand": { "@type": "Brand", "name": "MUSA Green" },
-  "category": "Environmental IoT Edge Device"
-}
-</script>
-</head>
-<body>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Product",
+                "name": "MUSA Integrator",
+                "description": "On-site edge data logger for environmental telemetry. Connects to CEMS analysers, water quality probes, AQMS stations, energy meters. Works offline with store-and-forward.",
+                "brand": { "@type": "Brand", "name": "MUSA Green" },
+                "category": "Environmental IoT Edge Device"
+            }
+        </script>
+    </head>
+    <body>
+        <!-- NAV -->
+        <header class="topbar" id="topbar">
+            <div class="container row">
+                <a
+                    href="../index.html"
+                    class="brand"
+                    aria-label="MUSA Green home"
+                    ><img
+                        src="../assets/logo.png"
+                        alt="MUSA Green"
+                        class="brand-logo"
+                /></a>
+                <nav class="nav" aria-label="Primary">
+                    <div class="nav-item">
+                        <a class="nav-link" href="../solutions/index.html"
+                            >Solutions <i class="fas fa-chevron-down chev"></i
+                        ></a>
+                        <div class="dropdown" role="menu">
+                            <a href="../solutions/air-emission-monitoring.html"
+                                ><i class="fas fa-smog"></i
+                                ><span
+                                    >Air Emission Monitoring<small
+                                        >SISPEK - Stack CEMS</small
+                                    ></span
+                                ></a
+                            >
+                            <a href="../solutions/wastewater-monitoring.html"
+                                ><i class="fas fa-water"></i
+                                ><span
+                                    >Wastewater Monitoring<small
+                                        >SPARING - Discharge points</small
+                                    ></span
+                                ></a
+                            >
+                            <a href="../solutions/air-quality-monitoring.html"
+                                ><i class="fas fa-wind"></i
+                                ><span
+                                    >Air Quality Monitoring<small
+                                        >ISPU - Ambient AQMS</small
+                                    ></span
+                                ></a
+                            >
+                            <a href="../solutions/carbon-accounting.html"
+                                ><i class="fas fa-leaf"></i
+                                ><span
+                                    >Carbon Accounting<small
+                                        >CDP - Scope 1/2/3</small
+                                    ></span
+                                ></a
+                            >
+                            <a href="../solutions/sustainability-report.html"
+                                ><i class="fas fa-file-alt"></i
+                                ><span
+                                    >Sustainability Report<small
+                                        >GRI · PROPER</small
+                                    ></span
+                                ></a
+                            >
+                            <a href="../solutions/water-assessment.html"
+                                ><i class="fas fa-tint"></i
+                                ><span
+                                    >Water Assessment<small
+                                        >WRA blueprint</small
+                                    ></span
+                                ></a
+                            >
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="index.html"
+                            >Products <i class="fas fa-chevron-down chev"></i
+                        ></a>
+                        <div class="dropdown" role="menu">
+                            <a href="musa-integrator.html"
+                                ><i class="fas fa-microchip"></i
+                                ><span
+                                    >MUSA Integrator<small
+                                        >On-site data logger</small
+                                    ></span
+                                ></a
+                            >
+                            <a href="musa-data-management.html"
+                                ><i class="fas fa-database"></i
+                                ><span
+                                    >MUSA Data Management<small
+                                        >Cloud / On-prem warehouse</small
+                                    ></span
+                                ></a
+                            >
+                            <a href="musa-view.html"
+                                ><i class="fas fa-chart-line"></i
+                                ><span
+                                    >MUSA View<small
+                                        >Environmental Digital Twin</small
+                                    ></span
+                                ></a
+                            >
+                            <a href="musa-assistant.html"
+                                ><i class="fas fa-robot"></i
+                                ><span
+                                    >MUSA Assistant<small
+                                        >Personal AI agent</small
+                                    ></span
+                                ></a
+                            >
+                        </div>
+                    </div>
+                    <a class="nav-link" href="../articles/index.html"
+                        >Articles</a
+                    >
+                    <a class="nav-link" href="../about.html">About</a>
+                </nav>
+                <div class="actions">
+                    <a class="btn btn-primary" href="mailto:admin@musagreen.com"
+                        ><i class="fas fa-paper-plane"></i>Get started</a
+                    >
+                </div>
+                <button
+                    class="nav-toggle"
+                    id="navToggle"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
 
-<!-- NAV -->
-<header class="topbar" id="topbar">
- <div class="container row">
- <a href="../index.html" class="brand" aria-label="MUSA Green home"><img src="../assets/logo.png" alt="MUSA Green" class="brand-logo" /></a>
- <nav class="nav" aria-label="Primary">
- <div class="nav-item">
- <a class="nav-link" href="../solutions/index.html">Solutions <i class="fas fa-chevron-down chev"></i></a>
- <div class="dropdown" role="menu">
- <a href="../solutions/air-emission-monitoring.html"><i class="fas fa-smog"></i><span>Air Emission Monitoring<small>SISPEK - Stack CEMS</small></span></a>
- <a href="../solutions/wastewater-monitoring.html"><i class="fas fa-water"></i><span>Wastewater Monitoring<small>SPARING - Discharge points</small></span></a>
- <a href="../solutions/air-quality-monitoring.html"><i class="fas fa-wind"></i><span>Air Quality Monitoring<small>ISPU - Ambient AQMS</small></span></a>
- <a href="../solutions/carbon-accounting.html"><i class="fas fa-leaf"></i><span>Carbon Accounting<small>CDP - Scope 1/2/3</small></span></a>
- <a href="../solutions/sustainability-report.html"><i class="fas fa-file-alt"></i><span>Sustainability Report<small>GRI · PROPER</small></span></a>
- <a href="../solutions/water-assessment.html"><i class="fas fa-tint"></i><span>Water Assessment<small>WRA blueprint</small></span></a>
- </div>
- </div>
- <div class="nav-item">
- <a class="nav-link" href="index.html">Products <i class="fas fa-chevron-down chev"></i></a>
- <div class="dropdown" role="menu">
- <a href="musa-integrator.html"><i class="fas fa-microchip"></i><span>MUSA Integrator<small>On-site data logger</small></span></a>
- <a href="musa-data-management.html"><i class="fas fa-database"></i><span>MUSA Data Management<small>Cloud / On-prem warehouse</small></span></a>
- <a href="musa-view.html"><i class="fas fa-chart-line"></i><span>MUSA View<small>Environmental Digital Twin</small></span></a>
- <a href="musa-assistant.html"><i class="fas fa-robot"></i><span>MUSA Assistant<small>Personal AI agent</small></span></a>
- </div>
- </div>
- <a class="nav-link" href="../articles/index.html">Articles</a>
- <a class="nav-link" href="../about.html">About</a>
- </nav>
- <div class="actions">
- <a class="btn btn-primary" href="mailto:admin@musagreen.com"><i class="fas fa-paper-plane"></i>Get started</a>
- </div>
- <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
- <i class="fas fa-bars"></i>
- </button>
- </div>
-</header>
+        <!-- Mobile nav drawer -->
+        <div
+            class="mobile-nav-overlay"
+            id="mobileNav"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Navigation menu"
+        >
+            <div class="mobile-nav-panel">
+                <button
+                    class="mobile-nav-close"
+                    id="navClose"
+                    aria-label="Close menu"
+                >
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="mobile-nav-section">Solutions</div>
+                <a href="../solutions/air-emission-monitoring.html"
+                    ><i class="fas fa-smog"></i>Air Emission Monitoring</a
+                >
+                <a href="../solutions/wastewater-monitoring.html"
+                    ><i class="fas fa-water"></i>Wastewater Monitoring</a
+                >
+                <a href="../solutions/air-quality-monitoring.html"
+                    ><i class="fas fa-wind"></i>Air Quality Monitoring</a
+                >
+                <a href="../solutions/carbon-accounting.html"
+                    ><i class="fas fa-leaf"></i>Carbon Accounting</a
+                >
+                <a href="../solutions/sustainability-report.html"
+                    ><i class="fas fa-file-alt"></i>Sustainability Report</a
+                >
+                <a href="../solutions/water-assessment.html"
+                    ><i class="fas fa-tint"></i>Water Assessment</a
+                >
+                <div class="mobile-nav-section">Products</div>
+                <a href="musa-integrator.html"
+                    ><i class="fas fa-microchip"></i>MUSA Integrator</a
+                >
+                <a href="musa-data-management.html"
+                    ><i class="fas fa-database"></i>MUSA Data Management</a
+                >
+                <a href="musa-view.html"
+                    ><i class="fas fa-chart-line"></i>MUSA View</a
+                >
+                <a href="musa-assistant.html"
+                    ><i class="fas fa-robot"></i>MUSA Assistant</a
+                >
+                <div class="mobile-nav-section">Company</div>
+                <a href="../articles/index.html"
+                    ><i class="fas fa-newspaper"></i>Articles</a
+                >
+                <a href="../about.html"
+                    ><i class="fas fa-info-circle"></i>About</a
+                >
+                <div class="mobile-nav-cta">
+                    <a class="btn btn-primary" href="mailto:admin@musagreen.com"
+                        ><i class="fas fa-paper-plane"></i>Get started</a
+                    >
+                </div>
+            </div>
+        </div>
+        <script>
+            (function () {
+                var toggle = document.getElementById("navToggle");
+                var overlay = document.getElementById("mobileNav");
+                var close = document.getElementById("navClose");
+                function open() {
+                    overlay.classList.add("open");
+                    toggle.setAttribute("aria-expanded", "true");
+                    document.body.style.overflow = "hidden";
+                }
+                function shut() {
+                    overlay.classList.remove("open");
+                    toggle.setAttribute("aria-expanded", "false");
+                    document.body.style.overflow = "";
+                }
+                toggle.addEventListener("click", open);
+                close.addEventListener("click", shut);
+                overlay.addEventListener("click", function (e) {
+                    if (e.target === overlay) shut();
+                });
+                document.addEventListener("keydown", function (e) {
+                    if (e.key === "Escape") shut();
+                });
+            })();
+        </script>
 
-<!-- Mobile nav drawer -->
-<div class="mobile-nav-overlay" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu">
- <div class="mobile-nav-panel">
- <button class="mobile-nav-close" id="navClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
- <div class="mobile-nav-section">Solutions</div>
- <a href="../solutions/air-emission-monitoring.html"><i class="fas fa-smog"></i>Air Emission Monitoring</a>
- <a href="../solutions/wastewater-monitoring.html"><i class="fas fa-water"></i>Wastewater Monitoring</a>
- <a href="../solutions/air-quality-monitoring.html"><i class="fas fa-wind"></i>Air Quality Monitoring</a>
- <a href="../solutions/carbon-accounting.html"><i class="fas fa-leaf"></i>Carbon Accounting</a>
- <a href="../solutions/sustainability-report.html"><i class="fas fa-file-alt"></i>Sustainability Report</a>
- <a href="../solutions/water-assessment.html"><i class="fas fa-tint"></i>Water Assessment</a>
- <div class="mobile-nav-section">Products</div>
- <a href="musa-integrator.html"><i class="fas fa-microchip"></i>MUSA Integrator</a>
- <a href="musa-data-management.html"><i class="fas fa-database"></i>MUSA Data Management</a>
- <a href="musa-view.html"><i class="fas fa-chart-line"></i>MUSA View</a>
- <a href="musa-assistant.html"><i class="fas fa-robot"></i>MUSA Assistant</a>
- <div class="mobile-nav-section">Company</div>
- <a href="../articles/index.html"><i class="fas fa-newspaper"></i>Articles</a>
- <a href="../about.html"><i class="fas fa-info-circle"></i>About</a>
- <div class="mobile-nav-cta">
- <a class="btn btn-primary" href="mailto:admin@musagreen.com"><i class="fas fa-paper-plane"></i>Get started</a>
- </div>
- </div>
-</div>
-<script>
-(function(){
-  var toggle = document.getElementById('navToggle');
-  var overlay = document.getElementById('mobileNav');
-  var close = document.getElementById('navClose');
-  function open() { overlay.classList.add('open'); toggle.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
-  function shut() { overlay.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
-  toggle.addEventListener('click', open);
-  close.addEventListener('click', shut);
-  overlay.addEventListener('click', function(e){ if(e.target===overlay) shut(); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape') shut(); });
-})();
-</script>
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container">
+                <div>
+                    <div class="breadcrumb">
+                        <a href="../index.html">Home</a
+                        ><i class="fas fa-chevron-right"></i
+                        ><a href="index.html">Products</a
+                        ><i class="fas fa-chevron-right"></i
+                        ><span>MUSA Integrator</span>
+                    </div>
+                    <span class="reg-badge"
+                        ><i class="fas fa-microchip"></i> Edge · 02 of 04</span
+                    >
+                    <h1>The edge device that never loses data.</h1>
+                    <p class="lead">
+                        Collects, timestamps, signs and forwards every sensor
+                        reading, even when the network drops. The MUSA
+                        Integrator is the bridge between your physical
+                        instruments and the data warehouse.
+                    </p>
+                    <div class="actions">
+                        <a
+                            class="btn btn-primary"
+                            href="mailto:admin@musagreen.com"
+                            ><i class="fas fa-paper-plane"></i>Book a demo</a
+                        >
+                        <a
+                            class="btn btn-ghost"
+                            style="
+                                color: #fff;
+                                border-color: rgba(255, 255, 255, 0.25);
+                            "
+                            href="#features"
+                            ><i class="fas fa-list"></i>See features</a
+                        >
+                    </div>
+                </div>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
- <div class="container">
- <div>
- <div class="breadcrumb"><a href="../index.html">Home</a><i class="fas fa-chevron-right"></i><a href="index.html">Products</a><i class="fas fa-chevron-right"></i><span>MUSA Integrator</span></div>
- <span class="reg-badge"><i class="fas fa-microchip"></i> Edge · 02 of 04</span>
- <h1>The edge device that never loses data.</h1>
- <p class="lead">Collects, timestamps, signs and forwards every sensor reading, even when the network drops. The MUSA Integrator is the bridge between your physical instruments and the data warehouse.</p>
- <div class="actions">
- <a class="btn btn-primary" href="mailto:admin@musagreen.com"><i class="fas fa-paper-plane"></i>Book a demo</a>
- <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.25)" href="#features"><i class="fas fa-list"></i>See features</a>
- </div>
- </div>
+                <!-- Hero: same Command Center chrome as the homepage platform preview, tailored to the edge device -->
+                <div
+                    class="hero-shot"
+                    style="
+                        background: transparent;
+                        border: none;
+                        box-shadow: none;
+                        padding: 0;
+                        aspect-ratio: auto;
+                        overflow: visible;
+                    "
+                    aria-hidden="true"
+                >
+                    <div class="pm-wrap" style="padding: 8px">
+                        <div
+                            class="pm"
+                            style="display: flex; flex-direction: column"
+                        >
+                            <div class="pm-chrome">
+                                <img
+                                    src="../assets/logo.png"
+                                    alt=""
+                                    class="pm-brand-logo"
+                                />
+                                <span class="pm-brand-divider"></span>
+                                <div class="pm-site">
+                                    MI-200<small>Edge Device Console</small>
+                                </div>
+                                <div class="pm-status">
+                                    <span class="pm-dot"></span>ONLINE
+                                </div>
+                            </div>
+                            <div
+                                style="
+                                    padding: 12px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+                                    flex: 1;
+                                "
+                            >
+                                <div class="pm-card">
+                                    <div class="pm-card-h">
+                                        I/O Channels
+                                        <small>8 sensors linked</small>
+                                    </div>
+                                    <div
+                                        style="
+                                            display: grid;
+                                            grid-template-columns: repeat(
+                                                4,
+                                                1fr
+                                            );
+                                            gap: 8px;
+                                        "
+                                    >
+                                        <div
+                                            style="
+                                                background: #f7faf9;
+                                                border: 1px solid var(--line);
+                                                border-radius: 8px;
+                                                padding: 8px;
+                                                text-align: center;
+                                            "
+                                        >
+                                            <i
+                                                class="fas fa-wave-square"
+                                                style="
+                                                    color: var(--teal-600);
+                                                    font-size: 12px;
+                                                "
+                                            ></i>
+                                            <div
+                                                style="
+                                                    font-family: var(
+                                                        --font-mono
+                                                    );
+                                                    font-size: 8px;
+                                                    color: var(--ink-500);
+                                                    letter-spacing: 0.06em;
+                                                    margin-top: 5px;
+                                                "
+                                            >
+                                                AI 1-8
+                                            </div>
+                                            <div
+                                                style="
+                                                    font-size: 9px;
+                                                    color: #4fb04f;
+                                                    margin-top: 3px;
+                                                "
+                                            >
+                                                ● LINKED
+                                            </div>
+                                        </div>
+                                        <div
+                                            style="
+                                                background: #f7faf9;
+                                                border: 1px solid var(--line);
+                                                border-radius: 8px;
+                                                padding: 8px;
+                                                text-align: center;
+                                            "
+                                        >
+                                            <i
+                                                class="fas fa-network-wired"
+                                                style="
+                                                    color: var(--teal-600);
+                                                    font-size: 12px;
+                                                "
+                                            ></i>
+                                            <div
+                                                style="
+                                                    font-family: var(
+                                                        --font-mono
+                                                    );
+                                                    font-size: 8px;
+                                                    color: var(--ink-500);
+                                                    letter-spacing: 0.06em;
+                                                    margin-top: 5px;
+                                                "
+                                            >
+                                                RS-485 1-4
+                                            </div>
+                                            <div
+                                                style="
+                                                    font-size: 9px;
+                                                    color: #4fb04f;
+                                                    margin-top: 3px;
+                                                "
+                                            >
+                                                ● LINKED
+                                            </div>
+                                        </div>
+                                        <div
+                                            style="
+                                                background: #f7faf9;
+                                                border: 1px solid var(--line);
+                                                border-radius: 8px;
+                                                padding: 8px;
+                                                text-align: center;
+                                            "
+                                        >
+                                            <i
+                                                class="fas fa-tint"
+                                                style="
+                                                    color: var(--teal-600);
+                                                    font-size: 12px;
+                                                "
+                                            ></i>
+                                            <div
+                                                style="
+                                                    font-family: var(
+                                                        --font-mono
+                                                    );
+                                                    font-size: 8px;
+                                                    color: var(--ink-500);
+                                                    letter-spacing: 0.06em;
+                                                    margin-top: 5px;
+                                                "
+                                            >
+                                                SDI-12 1-2
+                                            </div>
+                                            <div
+                                                style="
+                                                    font-size: 9px;
+                                                    color: #4fb04f;
+                                                    margin-top: 3px;
+                                                "
+                                            >
+                                                ● LINKED
+                                            </div>
+                                        </div>
+                                        <div
+                                            style="
+                                                background: #f7faf9;
+                                                border: 1px solid var(--line);
+                                                border-radius: 8px;
+                                                padding: 8px;
+                                                text-align: center;
+                                            "
+                                        >
+                                            <i
+                                                class="fas fa-bolt"
+                                                style="
+                                                    color: var(--teal-600);
+                                                    font-size: 12px;
+                                                "
+                                            ></i>
+                                            <div
+                                                style="
+                                                    font-family: var(
+                                                        --font-mono
+                                                    );
+                                                    font-size: 8px;
+                                                    color: var(--ink-500);
+                                                    letter-spacing: 0.06em;
+                                                    margin-top: 5px;
+                                                "
+                                            >
+                                                PULSE 1-4
+                                            </div>
+                                            <div
+                                                style="
+                                                    font-size: 9px;
+                                                    color: #4fb04f;
+                                                    margin-top: 3px;
+                                                "
+                                            >
+                                                ● LINKED
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pm-card" style="flex: 1">
+                                    <div class="pm-card-h">
+                                        Local Buffer <small>32 GB eMMC</small>
+                                    </div>
+                                    <ul class="pm-cap-list">
+                                        <li>
+                                            Used
+                                            <div class="pm-bar">
+                                                <span style="width: 7%"></span>
+                                            </div>
+                                            <b>2.1 GB</b>
+                                        </li>
+                                    </ul>
+                                    <p class="pm-fine">
+                                        ✓ 0 gaps · every frame signed &amp;
+                                        queued · auto-resumes on reconnect
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
- <!-- Hero image -->
- <div class="hero-shot" style="background:#0A2C3E;padding:14px;display:flex;align-items:center;justify-content:center" aria-hidden="true">
- <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" alt="Circuit board technology" style="width:100%;height:100%;object-fit:cover;border-radius:10px;opacity:.85" />
- </div>
- </div>
-</section>
+        <!-- OVERVIEW -->
+        <section class="section">
+            <div class="container two-col">
+                <aside>
+                    <span class="eyebrow">Overview</span>
+                    <h2>The bridge between sensors and the cloud.</h2>
+                </aside>
+                <div class="body">
+                    <p class="text-lead">
+                        The MUSA Integrator is an on-site data logger
+                        purpose-built for environmental telemetry. It sits at
+                        the boundary between the physical world (sensors,
+                        analysers, meters) and the digital world (data
+                        warehouse, platform, AI). Every reading from every
+                        sensor passes through it, it collects, timestamps,
+                        signs, and forwards. If the network drops, it buffers
+                        locally and resumes when the link is back. No data lost,
+                        no gaps.
+                    </p>
+                    <p>
+                        Designed for the harsh realities of Indonesian
+                        industrial sites: dust, heat, intermittent power and
+                        unreliable cellular coverage. The Integrator ships with
+                        enough local storage to buffer 30 days of 1-minute data,
+                        more than enough to survive a monsoon outage.
+                    </p>
+                    <p>
+                        It connects to
+                        <strong>any sensor out of the box</strong>: CEMS gas
+                        analysers over Modbus, water quality sondes over SDI-12,
+                        energy meters over pulse counters, AQMS stations over
+                        MQTT. One device, every protocol, every site.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-<!-- OVERVIEW -->
-<section class="section">
- <div class="container two-col">
- <aside>
- <span class="eyebrow">Overview</span>
- <h2>The bridge between sensors and the cloud.</h2>
- </aside>
- <div class="body">
- <p class="text-lead">The MUSA Integrator is an on-site data logger purpose-built for environmental telemetry. It sits at the boundary between the physical world (sensors, analysers, meters) and the digital world (data warehouse, platform, AI). Every reading from every sensor passes through it, it collects, timestamps, signs, and forwards. If the network drops, it buffers locally and resumes when the link is back. No data lost, no gaps.</p>
- <p>Designed for the harsh realities of Indonesian industrial sites: dust, heat, intermittent power and unreliable cellular coverage. The Integrator ships with enough local storage to buffer 30 days of 1-minute data, more than enough to survive a monsoon outage.</p>
- <p>It connects to <strong>any sensor out of the box</strong>: CEMS gas analysers over Modbus, water quality sondes over SDI-12, energy meters over pulse counters, AQMS stations over MQTT. One device, every protocol, every site.</p>
- </div>
- </div>
-</section>
+        <!-- FEATURES -->
+        <section class="section section--soft" id="features">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Features</span>
+                    <h2>Built for the site, not the showroom.</h2>
+                </div>
+                <div class="feat-grid">
+                    <div class="feat-card">
+                        <div class="copy">
+                            <h3>Universal sensor connectivity</h3>
+                            
+                            <ul>
+                                <li>8× analogue inputs (4-20mA)</li>
+                                <li>4× RS-485/Modbus digital channels</li>
+                                <li>2× SDI-12 for water quality sondes</li>
+                                <li>4× pulse counter for flow/energy meters</li>
+                            </ul>
+                        </div>
+                        <div
+                            class="shot"
+                            style="
+                                background: #0a2c3e;
+                                padding: 14px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 10px;
+                                aspect-ratio: auto;
+                                overflow: visible;
+                            "
+                        >
+                            <div
+                                style="
+                                    font-family: var(--font-mono);
+                                    font-size: 9px;
+                                    color: #7e9aa3;
+                                    letter-spacing: 0.1em;
+                                    text-transform: uppercase;
+                                    text-align: center;
+                                "
+                            >
+                                Protocols in → one device
+                            </div>
+                            <div
+                                style="
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr;
+                                    gap: 8px;
+                                "
+                            >
+                                <div
+                                    style="
+                                        background: rgba(84, 142, 155, 0.1);
+                                        border: 1px solid
+                                            rgba(84, 142, 155, 0.3);
+                                        border-radius: 8px;
+                                        padding: 8px;
+                                        text-align: center;
+                                        font-family: var(--font-mono);
+                                        font-size: 10px;
+                                        color: #fff;
+                                    "
+                                >
+                                    Modbus RTU/TCP
+                                </div>
+                                <div
+                                    style="
+                                        background: rgba(84, 142, 155, 0.1);
+                                        border: 1px solid
+                                            rgba(84, 142, 155, 0.3);
+                                        border-radius: 8px;
+                                        padding: 8px;
+                                        text-align: center;
+                                        font-family: var(--font-mono);
+                                        font-size: 10px;
+                                        color: #fff;
+                                    "
+                                >
+                                    SDI-12
+                                </div>
+                                <div
+                                    style="
+                                        background: rgba(84, 142, 155, 0.1);
+                                        border: 1px solid
+                                            rgba(84, 142, 155, 0.3);
+                                        border-radius: 8px;
+                                        padding: 8px;
+                                        text-align: center;
+                                        font-family: var(--font-mono);
+                                        font-size: 10px;
+                                        color: #fff;
+                                    "
+                                >
+                                    4-20mA
+                                </div>
+                                <div
+                                    style="
+                                        background: rgba(84, 142, 155, 0.1);
+                                        border: 1px solid
+                                            rgba(84, 142, 155, 0.3);
+                                        border-radius: 8px;
+                                        padding: 8px;
+                                        text-align: center;
+                                        font-family: var(--font-mono);
+                                        font-size: 10px;
+                                        color: #fff;
+                                    "
+                                >
+                                    MQTT / OPC-UA
+                                </div>
+                            </div>
+                            <div
+                                style="
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: #3f5c66;
+                                "
+                            >
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div
+                                style="
+                                    background: rgba(79, 176, 79, 0.1);
+                                    border: 1px solid rgba(79, 176, 79, 0.35);
+                                    border-radius: 8px;
+                                    padding: 10px;
+                                    text-align: center;
+                                "
+                            >
+                                <i
+                                    class="fas fa-microchip"
+                                    style="color: #4fb04f"
+                                ></i>
+                                <span
+                                    style="
+                                        font-size: 12px;
+                                        color: #fff;
+                                        font-weight: 600;
+                                    "
+                                    >MUSA Integrator</span
+                                >
+                            </div>
+                        </div>
+                    </div>
 
-<!-- FEATURES -->
-<section class="section section--soft" id="features">
- <div class="container">
- <div class="section-head">
- <span class="eyebrow">Features</span>
- <h2>Built for the site, not the showroom.</h2>
- </div>
- <div class="feat-grid">
- <div class="feat-card">
- <div class="copy">
- <h3>Universal sensor connectivity</h3>
- <p>Modbus RTU/TCP, SDI-12, 4-20mA analog, pulse counters, MQTT publishers, OPC-UA. Connects to any CEMS analyser, water quality sonde, AQMS station, energy meter, or flow meter out of the box.</p>
- <ul><li>8× analogue inputs (4-20mA)</li><li>4× RS-485/Modbus digital channels</li><li>2× SDI-12 for water quality sondes</li><li>4× pulse counter for flow/energy meters</li></ul>
- </div>
- <div class="shot" style="background:#0A2C3E;display:flex;align-items:center;justify-content:center;overflow:hidden">
- <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Circuit board connectivity" style="width:100%;height:100%;object-fit:cover;opacity:.7" />
- </div>
- </div>
+                    <div class="feat-card">
+                        <div class="copy">
+                            <h3>Offline resilience</h3>
+                            
+                            <ul>
+                                <li>32 GB eMMC local storage</li>
+                                <li>Automatic gap detection &amp; back-fill</li>
+                                <li>Store-and-forward with priority queuing</li>
+                                <li>
+                                    Watchdog timer, self-recovers from hangs
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            class="shot"
+                            style="
+                                background: #0a2c3e;
+                                padding: 16px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 12px;
+                                aspect-ratio: auto;
+                                overflow: visible;
+                            "
+                        >
+                            <div
+                                style="
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                "
+                            >
+                                <span
+                                    style="
+                                        font-family: var(--font-mono);
+                                        font-size: 10px;
+                                        color: #e76a4a;
+                                        letter-spacing: 0.08em;
+                                    "
+                                    ><i
+                                        class="fas fa-wifi-slash"
+                                        style="margin-right: 5px"
+                                    ></i
+                                    >NETWORK: OFFLINE</span
+                                ><span
+                                    style="
+                                        font-family: var(--font-mono);
+                                        font-size: 9px;
+                                        color: #88a8b2;
+                                    "
+                                    >DAY 12 / 30</span
+                                >
+                            </div>
+                            <div>
+                                <div
+                                    style="
+                                        display: flex;
+                                        justify-content: space-between;
+                                        font-family: var(--font-mono);
+                                        font-size: 9px;
+                                        color: #88a8b2;
+                                        margin-bottom: 4px;
+                                    "
+                                >
+                                    <span>LOCAL BUFFER</span
+                                    ><span>8.6 GB / 32 GB</span>
+                                </div>
+                                <div
+                                    style="
+                                        height: 8px;
+                                        border-radius: 4px;
+                                        background: rgba(255, 255, 255, 0.08);
+                                        overflow: hidden;
+                                    "
+                                >
+                                    <div
+                                        style="
+                                            width: 27%;
+                                            height: 100%;
+                                            background: var(--teal);
+                                        "
+                                    ></div>
+                                </div>
+                            </div>
+                            <div
+                                style="
+                                    font-family: var(--font-mono);
+                                    font-size: 9px;
+                                    color: #4fb04f;
+                                "
+                            >
+                                ✓ 0 GAPS · WILL AUTO-RESUME ON RECONNECT
+                            </div>
+                        </div>
+                    </div>
 
- <div class="feat-card">
- <div class="copy">
- <h3>Offline resilience</h3>
- <p>Stores up to 30 days of 1-minute data on local flash. When the network returns, auto-resumes with gap detection. Network loss never means data loss.</p>
- <ul><li>32 GB eMMC local storage</li><li>Automatic gap detection &amp; back-fill</li><li>Store-and-forward with priority queuing</li><li>Watchdog timer, self-recovers from hangs</li></ul>
- </div>
- <div class="shot" style="background:#0A2C3E;display:flex;align-items:center;justify-content:center;overflow:hidden">
- <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=600&q=80" alt="Signal resilience" style="width:100%;height:100%;object-fit:cover;opacity:.7" />
- </div>
- </div>
+                    <div class="feat-card">
+                        <div class="copy">
+                            <h3>Tamper-evident data signing</h3>
+                            
+                            <ul>
+                                <li>Per-frame HMAC signature</li>
+                                <li>Chain-of-custody log</li>
+                                <li>Regulator-verifiable integrity proof</li>
+                                <li>
+                                    Tamper detection alerts via SMS/Telegram
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            class="shot"
+                            style="
+                                background: #0a2c3e;
+                                padding: 16px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 10px;
+                                aspect-ratio: auto;
+                                overflow: visible;
+                            "
+                        >
+                            <div
+                                style="
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 0;
+                                "
+                            >
+                                <div
+                                    style="
+                                        width: 26px;
+                                        height: 26px;
+                                        border-radius: 50%;
+                                        background: rgba(79, 176, 79, 0.15);
+                                        border: 1px solid rgba(79, 176, 79, 0.4);
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        color: #4fb04f;
+                                        font-size: 10px;
+                                    "
+                                >
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div
+                                    style="
+                                        flex: 1;
+                                        height: 1px;
+                                        background: rgba(84, 142, 155, 0.3);
+                                    "
+                                ></div>
+                                <div
+                                    style="
+                                        width: 26px;
+                                        height: 26px;
+                                        border-radius: 50%;
+                                        background: rgba(79, 176, 79, 0.15);
+                                        border: 1px solid rgba(79, 176, 79, 0.4);
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        color: #4fb04f;
+                                        font-size: 10px;
+                                    "
+                                >
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div
+                                    style="
+                                        flex: 1;
+                                        height: 1px;
+                                        background: rgba(84, 142, 155, 0.3);
+                                    "
+                                ></div>
+                                <div
+                                    style="
+                                        width: 26px;
+                                        height: 26px;
+                                        border-radius: 50%;
+                                        background: rgba(79, 176, 79, 0.15);
+                                        border: 1px solid rgba(79, 176, 79, 0.4);
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        color: #4fb04f;
+                                        font-size: 10px;
+                                    "
+                                >
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+                            <div
+                                style="
+                                    font-family: var(--font-mono);
+                                    font-size: 9px;
+                                    color: #88a8b2;
+                                    letter-spacing: 0.05em;
+                                "
+                            >
+                                CHAIN OF CUSTODY · UNBROKEN
+                            </div>
+                            <div
+                                style="
+                                    background: rgba(255, 255, 255, 0.03);
+                                    border: 1px solid rgba(255, 255, 255, 0.06);
+                                    border-radius: 8px;
+                                    padding: 10px;
+                                    font-family: var(--font-mono);
+                                    font-size: 9px;
+                                    color: #548e9b;
+                                    word-break: break-all;
+                                "
+                            >
+                                HMAC · 7a3f9c...e21b04 ✓ VERIFIED
+                            </div>
+                        </div>
+                    </div>
 
- <div class="feat-card">
- <div class="copy">
- <h3>Tamper-evident data signing</h3>
- <p>Every data frame is cryptographically signed at the edge. Regulators and auditors can verify data integrity from sensor to submission. No retroactive edits, no silent corrections.</p>
- <ul><li>Per-frame HMAC signature</li><li>Chain-of-custody log</li><li>Regulator-verifiable integrity proof</li><li>Tamper detection alerts via SMS/Telegram</li></ul>
- </div>
- <div class="shot" style="background:#0A2C3E;display:flex;align-items:center;justify-content:center;overflow:hidden">
- <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80" alt="Cryptographic security" style="width:100%;height:100%;object-fit:cover;opacity:.7" />
- </div>
- </div>
+                    <div class="feat-card">
+                        <div class="copy">
+                            <h3>SISPEK/SPARING direct push</h3>
+                            
+                            <ul>
+                                <li>Direct KLHK endpoint integration</li>
+                                <li>Cellular (4G LTE) or ethernet backhaul</li>
+                                <li>Submission receipt logging</li>
+                                <li>Auto-retry on failed submissions</li>
+                            </ul>
+                        </div>
+                        <div
+                            class="shot"
+                            style="
+                                background: #0a2c3e;
+                                padding: 14px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 6px;
+                                aspect-ratio: auto;
+                                overflow: visible;
+                            "
+                        >
+                            <div
+                                style="
+                                    font-family: var(--font-mono);
+                                    font-size: 9px;
+                                    color: #7e9aa3;
+                                    letter-spacing: 0.1em;
+                                    text-transform: uppercase;
+                                    margin-bottom: 2px;
+                                "
+                            >
+                                KLHK submission log
+                            </div>
+                            <div
+                                style="
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    background: rgba(79, 176, 79, 0.08);
+                                    border: 1px solid rgba(79, 176, 79, 0.25);
+                                    border-radius: 6px;
+                                    padding: 7px 10px;
+                                "
+                            >
+                                <span
+                                    style="
+                                        font-family: var(--font-mono);
+                                        font-size: 9px;
+                                        color: #fff;
+                                    "
+                                    >14:32:07 · SISPEK</span
+                                ><span
+                                    style="
+                                        font-family: var(--font-mono);
+                                        font-size: 9px;
+                                        color: #4fb04f;
+                                    "
+                                    >✓ RECEIVED</span
+                                >
+                            </div>
+                            <div
+                                style="
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    background: rgba(79, 176, 79, 0.08);
+                                    border: 1px solid rgba(79, 176, 79, 0.25);
+                                    border-radius: 6px;
+                                    padding: 7px 10px;
+                                "
+                            >
+                                <span
+                                    style="
+                                        font-family: var(--font-mono);
+                                        font-size: 9px;
+                                        color: #fff;
+                                    "
+                                    >13:32:05 · SPARING</span
+                                ><span
+                                    style="
+                                        font-family: var(--font-mono);
+                                        font-size: 9px;
+                                        color: #4fb04f;
+                                    "
+                                    >✓ RECEIVED</span
+                                >
+                            </div>
+                            <div
+                                style="
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    background: rgba(84, 142, 155, 0.08);
+                                    border: 1px solid rgba(84, 142, 155, 0.25);
+                                    border-radius: 6px;
+                                    padding: 7px 10px;
+                                "
+                            >
+                                <span
+                                    style="
+                                        font-family: var(--font-mono);
+                                        font-size: 9px;
+                                        color: #fff;
+                                    "
+                                    >12:32:04 · SISPEK</span
+                                ><span
+                                    style="
+                                        font-family: var(--font-mono);
+                                        font-size: 9px;
+                                        color: #4fb04f;
+                                    "
+                                    >✓ RECEIVED</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
- <div class="feat-card">
- <div class="copy">
- <h3>SISPEK/SPARING direct push</h3>
- <p>Integrator connects directly to KLHK submission endpoints via cellular or ethernet. No intermediate server, no manual transfer. The same data your operators see is what KLHK receives.</p>
- <ul><li>Direct KLHK endpoint integration</li><li>Cellular (4G LTE) or ethernet backhaul</li><li>Submission receipt logging</li><li>Auto-retry on failed submissions</li></ul>
- </div>
- <div class="shot" style="background:#0A2C3E;display:flex;align-items:center;justify-content:center;overflow:hidden">
- <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Data dashboard" style="width:100%;height:100%;object-fit:cover;opacity:.7" />
- </div>
- </div>
- </div>
- </div>
-</section>
+        <!-- TECH SPECS -->
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Technical specs</span>
+                    <h2>Under the hood.</h2>
+                </div>
+                <table class="spec-table">
+                    <tr>
+                        <td>CPU / OS</td>
+                        <td>Industrial ARM Cortex · Linux RT</td>
+                    </tr>
+                    <tr>
+                        <td>Local storage</td>
+                        <td>32 GB eMMC (30 days @ 1 min resolution)</td>
+                    </tr>
+                    <tr>
+                        <td>Connectivity</td>
+                        <td>
+                            4G LTE · Ethernet · Wi-Fi (management only) ·
+                            Optional: LoRa, Starlink
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sensor interfaces</td>
+                        <td>
+                            8× analogue (4-20mA) · 4× digital (RS-485/Modbus) ·
+                            2× SDI-12 · 4× pulse counter · USB OTG
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Protocols</td>
+                        <td>
+                            MQTT · HTTPS/REST · OPC-UA · SDI-12 · Modbus RTU/TCP
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Power</td>
+                        <td>
+                            12-24V DC · PoE+ optional · Solar-ready with
+                            external charge controller
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Enclosure</td>
+                        <td>
+                            IP65 polycarbonate · DIN rail or wall mount · -20°C
+                            to +60°C
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Certifications</td>
+                        <td>CE · FCC · SNI (Indonesian National Standard)</td>
+                    </tr>
+                    <tr>
+                        <td>Dimensions</td>
+                        <td>200 × 150 × 75 mm · 0.9 kg</td>
+                    </tr>
+                    <tr>
+                        <td>MTBF</td>
+                        <td>&gt;50,000 hours</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
 
-<!-- TECH SPECS -->
-<section class="section">
- <div class="container">
- <div class="section-head">
- <span class="eyebrow">Technical specs</span>
- <h2>Under the hood.</h2>
- </div>
- <table class="spec-table">
- <tr><td>CPU / OS</td><td>Industrial ARM Cortex · Linux RT</td></tr>
- <tr><td>Local storage</td><td>32 GB eMMC (30 days @ 1 min resolution)</td></tr>
- <tr><td>Connectivity</td><td>4G LTE · Ethernet · Wi-Fi (management only) · Optional: LoRa, Starlink</td></tr>
- <tr><td>Sensor interfaces</td><td>8× analogue (4-20mA) · 4× digital (RS-485/Modbus) · 2× SDI-12 · 4× pulse counter · USB OTG</td></tr>
- <tr><td>Protocols</td><td>MQTT · HTTPS/REST · OPC-UA · SDI-12 · Modbus RTU/TCP</td></tr>
- <tr><td>Power</td><td>12-24V DC · PoE+ optional · Solar-ready with external charge controller</td></tr>
- <tr><td>Enclosure</td><td>IP65 polycarbonate · DIN rail or wall mount · -20°C to +60°C</td></tr>
- <tr><td>Certifications</td><td>CE · FCC · SNI (Indonesian National Standard)</td></tr>
- <tr><td>Dimensions</td><td>200 × 150 × 75 mm · 0.9 kg</td></tr>
- <tr><td>MTBF</td><td>&gt;50,000 hours</td></tr>
- </table>
- </div>
-</section>
+        <!-- PROCESS -->
+        <section class="section section--soft">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Deployment</span>
+                    <h2>From box to live data in four steps.</h2>
+                </div>
+                <div class="feat-grid">
+                    <div class="feat-card">
+                        <div class="copy">
+                            <h3>1. Inventory &amp; spec</h3>
+                            <p>
+                                Sensor list, fuel types, communication
+                                infrastructure survey. We map every instrument
+                                on your site to an Integrator input and confirm
+                                the submission endpoints.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feat-card">
+                        <div class="copy">
+                            <h3>2. Configure &amp; provision</h3>
+                            <p>
+                                Edge config pushed remotely. Sensor mappings,
+                                submission endpoints, alert rules, all
+                                provisioned before the device ships to site.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feat-card">
+                        <div class="copy">
+                            <h3>3. Install &amp; commission</h3>
+                            <p>
+                                Physical mounting, sensor wiring, end-to-end
+                                test with KLHK sandbox. Your Integrator goes
+                                live with verified data flow on day one.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feat-card">
+                        <div class="copy">
+                            <h3>4. Operate &amp; maintain</h3>
+                            <p>
+                                Remote health monitoring, firmware OTA updates,
+                                annual calibration support. The Integrator runs
+                                itself, we keep it sharp.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- PROCESS -->
-<section class="section section--soft">
- <div class="container">
- <div class="section-head">
- <span class="eyebrow">Deployment</span>
- <h2>From box to live data in four steps.</h2>
- </div>
- <div class="feat-grid">
- <div class="feat-card">
- <div class="copy">
- <h3>1. Inventory &amp; spec</h3>
- <p>Sensor list, fuel types, communication infrastructure survey. We map every instrument on your site to an Integrator input and confirm the submission endpoints.</p>
- </div>
- </div>
- <div class="feat-card">
- <div class="copy">
- <h3>2. Configure &amp; provision</h3>
- <p>Edge config pushed remotely. Sensor mappings, submission endpoints, alert rules, all provisioned before the device ships to site.</p>
- </div>
- </div>
- <div class="feat-card">
- <div class="copy">
- <h3>3. Install &amp; commission</h3>
- <p>Physical mounting, sensor wiring, end-to-end test with KLHK sandbox. Your Integrator goes live with verified data flow on day one.</p>
- </div>
- </div>
- <div class="feat-card">
- <div class="copy">
- <h3>4. Operate &amp; maintain</h3>
- <p>Remote health monitoring, firmware OTA updates, annual calibration support. The Integrator runs itself, we keep it sharp.</p>
- </div>
- </div>
- </div>
- </div>
-</section>
+        <!-- RELATED SOLUTIONS -->
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Works with</span>
+                    <h2>Solutions powered by MUSA Integrator.</h2>
+                </div>
+                <div class="related-grid">
+                    <div class="rel-card">
+                        <div
+                            class="ico"
+                            style="
+                                background: var(--teal-100);
+                                color: var(--teal-600);
+                            "
+                        >
+                            <i class="fas fa-smog"></i>
+                        </div>
+                        <h4>Air Emission · SISPEK</h4>
+                        <p>
+                            CEMS analyser data collected at the edge, signed,
+                            and pushed directly to KLHK.
+                        </p>
+                        <a href="../solutions/air-emission-monitoring.html"
+                            >Solution detail <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                    <div class="rel-card">
+                        <div
+                            class="ico"
+                            style="
+                                background: var(--teal-100);
+                                color: var(--teal-600);
+                            "
+                        >
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h4>Wastewater · SPARING</h4>
+                        <p>
+                            Water quality sonde telemetry buffered locally,
+                            forwarded on reconnect.
+                        </p>
+                        <a href="../solutions/wastewater-monitoring.html"
+                            >Solution detail <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                    <div class="rel-card">
+                        <div
+                            class="ico"
+                            style="
+                                background: var(--teal-100);
+                                color: var(--teal-600);
+                            "
+                        >
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <h4>Air Quality · ISPU</h4>
+                        <p>
+                            AQMS station data aggregated at the edge,
+                            time-aligned, and submitted.
+                        </p>
+                        <a href="../solutions/air-quality-monitoring.html"
+                            >Solution detail <i class="fas fa-arrow-right"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- RELATED SOLUTIONS -->
-<section class="section">
- <div class="container">
- <div class="section-head">
- <span class="eyebrow">Works with</span>
- <h2>Solutions powered by MUSA Integrator.</h2>
- </div>
- <div class="related-grid">
- <div class="rel-card">
- <div class="ico" style="background:var(--teal-100);color:var(--teal-600)"><i class="fas fa-smog"></i></div>
- <h4>Air Emission · SISPEK</h4>
- <p>CEMS analyser data collected at the edge, signed, and pushed directly to KLHK.</p>
- <a href="../solutions/air-emission-monitoring.html">Solution detail <i class="fas fa-arrow-right"></i></a>
- </div>
- <div class="rel-card">
- <div class="ico" style="background:var(--teal-100);color:var(--teal-600)"><i class="fas fa-water"></i></div>
- <h4>Wastewater · SPARING</h4>
- <p>Water quality sonde telemetry buffered locally, forwarded on reconnect.</p>
- <a href="../solutions/wastewater-monitoring.html">Solution detail <i class="fas fa-arrow-right"></i></a>
- </div>
- <div class="rel-card">
- <div class="ico" style="background:var(--teal-100);color:var(--teal-600)"><i class="fas fa-wind"></i></div>
- <h4>Air Quality · ISPU</h4>
- <p>AQMS station data aggregated at the edge, time-aligned, and submitted.</p>
- <a href="../solutions/air-quality-monitoring.html">Solution detail <i class="fas fa-arrow-right"></i></a>
- </div>
- </div>
- </div>
-</section>
+        <!-- CTA -->
+        <section class="section section--tight">
+            <div class="container">
+                <div class="cta-banner">
+                    <div>
+                        <span class="eyebrow" style="color: var(--teal)"
+                            >Ready to deploy</span
+                        >
+                        <h2 style="margin-top: 10px">
+                            Get an Integrator on your site in two weeks.
+                        </h2>
+                        <p>
+                            Send us your sensor inventory and we'll spec,
+                            configure and ship. Installation support included.
+                        </p>
+                    </div>
+                    <div class="actions">
+                        <a
+                            class="btn btn-dark"
+                            href="mailto:admin@musagreen.com"
+                            ><i class="fas fa-envelope"></i>Email our team</a
+                        >
+                        <a
+                            class="btn btn-ghost"
+                            style="
+                                color: #fff;
+                                border-color: rgba(255, 255, 255, 0.3);
+                            "
+                            href="https://wa.me/6287882795313"
+                            ><i class="fab fa-whatsapp"></i>WhatsApp</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- CTA -->
-<section class="section section--tight">
- <div class="container">
- <div class="cta-banner">
- <div>
- <span class="eyebrow" style="color:var(--teal)">Ready to deploy</span>
- <h2 style="margin-top:10px">Get an Integrator on your site in two weeks.</h2>
- <p>Send us your sensor inventory and we'll spec, configure and ship. Installation support included.</p>
- </div>
- <div class="actions">
- <a class="btn btn-dark" href="mailto:admin@musagreen.com"><i class="fas fa-envelope"></i>Email our team</a>
- <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.3)" href="https://wa.me/6287882795313"><i class="fab fa-whatsapp"></i>WhatsApp</a>
- </div>
- </div>
- </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
- <div class="container">
- <div class="grid">
- <div>
- <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="MUSA Green" class="brand-logo" /></a>
- <p class="brand-blurb">MUSA Green builds Industrial Digital Twin platforms for environmental compliance and ESG performance across Indonesia.</p>
- </div>
- <div>
- <h5>Solutions</h5>
- <ul>
- <li><a href="../solutions/air-emission-monitoring.html">Air Emission · SISPEK</a></li>
- <li><a href="../solutions/wastewater-monitoring.html">Wastewater · SPARING</a></li>
- <li><a href="../solutions/air-quality-monitoring.html">Air Quality · ISPU</a></li>
- <li><a href="../solutions/carbon-accounting.html">Carbon · CDP</a></li>
- <li><a href="../solutions/sustainability-report.html">Sustainability · GRI</a></li>
- <li><a href="../solutions/water-assessment.html">Water Assessment · WRA</a></li>
- </ul>
- </div>
- <div>
- <h5>Products</h5>
- <ul>
- <li><a href="musa-integrator.html">MUSA Integrator</a></li>
- <li><a href="musa-data-management.html">MUSA Data Management</a></li>
- <li><a href="musa-view.html">MUSA View</a></li>
- <li><a href="musa-assistant.html">MUSA Assistant</a></li>
- <li><a href="../articles/index.html">Articles</a></li>
- <li><a href="../about.html">About</a></li>
- </ul>
- </div>
- <div>
- <h5>Contact</h5>
- <div class="contact">
- <a href="mailto:admin@musagreen.com"><i class="fas fa-envelope"></i>admin@musagreen.com</a>
- <a href="https://wa.me/6287882795313"><i class="fab fa-whatsapp"></i>+62 8788-279-5313</a>
- <a href="#"><i class="fas fa-map-marker-alt"></i>Jakarta, Indonesia</a>
- <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
- </div>
- </div>
- </div>
- <div class="legal">
- <span>© 2026 MUSA Green. All rights reserved.</span>
- <span>Industrial Digital Twin · IoT · ESG</span>
- </div>
- </div>
-</footer>
-
-</body>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="grid">
+                    <div>
+                        <a class="brand" href="../index.html"
+                            ><img
+                                src="../assets/logo.png"
+                                alt="MUSA Green"
+                                class="brand-logo"
+                        /></a>
+                        <p class="brand-blurb">
+                            MUSA Green builds Industrial Digital Twin platforms
+                            for environmental compliance and ESG performance
+                            across Indonesia.
+                        </p>
+                    </div>
+                    <div>
+                        <h5>Solutions</h5>
+                        <ul>
+                            <li>
+                                <a
+                                    href="../solutions/air-emission-monitoring.html"
+                                    >Air Emission · SISPEK</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../solutions/wastewater-monitoring.html"
+                                    >Wastewater · SPARING</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../solutions/air-quality-monitoring.html"
+                                    >Air Quality · ISPU</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../solutions/carbon-accounting.html"
+                                    >Carbon · CDP</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../solutions/sustainability-report.html"
+                                    >Sustainability · GRI</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../solutions/water-assessment.html"
+                                    >Water Assessment · WRA</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Products</h5>
+                        <ul>
+                            <li>
+                                <a href="musa-integrator.html"
+                                    >MUSA Integrator</a
+                                >
+                            </li>
+                            <li>
+                                <a href="musa-data-management.html"
+                                    >MUSA Data Management</a
+                                >
+                            </li>
+                            <li><a href="musa-view.html">MUSA View</a></li>
+                            <li>
+                                <a href="musa-assistant.html">MUSA Assistant</a>
+                            </li>
+                            <li>
+                                <a href="../articles/index.html">Articles</a>
+                            </li>
+                            <li><a href="../about.html">About</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Contact</h5>
+                        <div class="contact">
+                            <a href="mailto:admin@musagreen.com"
+                                ><i class="fas fa-envelope"></i
+                                >admin@musagreen.com</a
+                            >
+                            <a href="https://wa.me/6287882795313"
+                                ><i class="fab fa-whatsapp"></i>+62
+                                8788-279-5313</a
+                            >
+                            <a href="#"
+                                ><i class="fas fa-map-marker-alt"></i>Jakarta,
+                                Indonesia</a
+                            >
+                            <a href="#"
+                                ><i class="fab fa-linkedin"></i>LinkedIn</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="legal">
+                    <span>© 2026 MUSA Green. All rights reserved.</span>
+                    <span>Industrial Digital Twin · IoT · ESG</span>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>

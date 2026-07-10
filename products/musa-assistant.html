@@ -114,8 +114,8 @@
  </div>
  </div>
 
- <div class="hero-shot" aria-hidden="true">
- <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7;" />
+ <div class="hero-shot" style="background:#0A2C3E" aria-hidden="true">
+ <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(45deg, rgba(84,142,155,.08), rgba(84,142,155,.08) 1px, transparent 1px, transparent 18px);"></div>
  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,34,47,.85) 0%,rgba(6,34,47,.4) 100%);"></div>
  <div style="position:relative;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;padding:24px 28px;">
  <div style="font-family:var(--font-mono);font-size:10px;color:#7E9AA3;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px"><i class="fas fa-circle" style="color:#4FB04F;font-size:7px;margin-right:6px;vertical-align:middle;"></i> MUSA Assistant · Online</div>
@@ -158,52 +158,57 @@
  <div class="feat-card">
  <div class="copy">
  <h3>Natural language queries</h3>
- <p>Ask about any parameter, any site, any time range, in plain language. Understands Indonesian and English. Context-aware: remembers your estate, your stacks, your permits.</p>
+ 
  <ul><li>Multi-turn conversations with memory</li><li>"Compare SO₂ at A1 vs A7 this month"</li><li>Follow-up without re-stating context</li></ul>
  </div>
- <div class="shot">
- <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;" />
- <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,34,47,.85),rgba(6,34,47,.3));"></div>
- <div class="ph-label" style="z-index:1">Interface: Telegram chat</div>
+ <div class="shot" style="background:#0A2C3E;padding:14px;display:flex;flex-direction:column;justify-content:center;gap:8px;aspect-ratio:auto;overflow:visible">
+ <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:10px 12px;align-self:flex-end;max-width:80%"><p style="font-size:11.5px;color:#fff;margin:0">"Compare SO₂ at A1 vs A7 this month"</p></div>
+ <div style="background:rgba(84,142,155,.1);border:1px solid rgba(84,142,155,.3);border-radius:10px;padding:10px 12px;max-width:85%"><p style="font-size:11.5px;color:#fff;margin:0">A1 averaged <strong>210 µg/m³</strong>, A7 averaged <strong>184 µg/m³</strong>. A1 is 14% higher, driven by the Tue night shift.</p></div>
+ <div class="ph-label" style="position:static;margin-top:2px">Interface: Telegram chat</div>
  </div>
  </div>
 
  <div class="feat-card">
  <div class="copy">
  <h3>Sourced answers with data references</h3>
- <p>Every answer links back to the raw sensor data. See the exact reading, the exact time, the calibration state at that moment. No black-box responses.</p>
+ 
  <ul><li>Inline citations to warehouse timestamps</li><li>Calibration-status flag on every reading</li><li>One-tap "show me the raw data"</li></ul>
  </div>
- <div class="shot">
- <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;" />
- <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,34,47,.85),rgba(6,34,47,.3));"></div>
- <div class="ph-label" style="z-index:1">Answer with data source citation</div>
+ <div class="shot" style="background:#0A2C3E;padding:14px;display:flex;flex-direction:column;justify-content:center;gap:8px;aspect-ratio:auto;overflow:visible">
+ <p style="font-size:11.5px;color:#fff;margin:0;line-height:1.6">COD at SW-02 hit <strong>142 mg/L</strong> at 09:42 <sup style="color:var(--teal)">[1]</sup>. Calibration <span style="color:#4FB04F">✓ valid</span>.</p>
+ <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:8px 10px;font-family:var(--font-mono);font-size:9px;color:#88A8B2">[1] sensor SW-02 · 09:42:07 · frame #88213</div>
+ <div class="ph-label" style="position:static;margin-top:2px">Answer with data source citation</div>
  </div>
  </div>
 
  <div class="feat-card">
  <div class="copy">
  <h3>Anomaly detection &amp; alerts</h3>
- <p>Proactive monitoring: "Stack A1 SO₂ is trending 15% above the 7-day average", flagged before it becomes an exceedance. Configurable alert thresholds per parameter per site.</p>
+ 
  <ul><li>Push alerts when trends drift</li><li>Thresholds per permit, per parameter</li><li>Weekly digest option for management</li></ul>
  </div>
- <div class="shot">
- <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;" />
- <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,34,47,.85),rgba(6,34,47,.3));"></div>
- <div class="ph-label" style="z-index:1">Alert: trend anomaly detected</div>
+ <div class="shot" style="background:#0A2C3E;padding:14px;display:flex;flex-direction:column;justify-content:center;gap:10px;aspect-ratio:auto;overflow:visible">
+ <div style="display:flex;align-items:center;gap:8px;background:rgba(242,181,68,.1);border:1px solid rgba(242,181,68,.35);border-radius:8px;padding:10px"><i class="fas fa-triangle-exclamation" style="color:#F2B544"></i><span style="font-size:11.5px;color:#fff">Stack A1 SO₂ trending <strong>+15%</strong> vs 7-day avg</span></div>
+ <svg viewBox="0 0 200 36" preserveAspectRatio="none" style="width:100%;height:32px"><path d="M0 28 L30 26 L60 24 L90 20 L120 16 L150 10 L200 4" fill="none" stroke="#F2B544" stroke-width="2"/><line x1="0" x2="200" y1="18" y2="18" stroke="#E76A4A" stroke-width=".7" stroke-dasharray="4 3" opacity=".6"/></svg>
+ <div class="ph-label" style="position:static">Alert: trend anomaly detected</div>
  </div>
  </div>
 
  <div class="feat-card">
  <div class="copy">
  <h3>Report drafting</h3>
- <p>"Draft the Q2 emissions summary for stack A1 through A5." Assistant pulls data, applies emission factors, and produces a draft with tables and narrative. Human reviews; AI does the heavy lifting.</p>
+ 
  <ul><li>GRI, CDP, KLHK-aligned templates</li><li>Emission factor auto-application (IPCC, KLHK)</li><li>Export to DOCX or PDF for review</li></ul>
  </div>
- <div class="shot">
- <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;" />
- <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,34,47,.85),rgba(6,34,47,.3));"></div>
- <div class="ph-label" style="z-index:1">Draft: Q2 emissions summary</div>
+ <div class="shot" style="background:#0A2C3E;padding:14px;display:flex;flex-direction:column;justify-content:center;gap:6px;aspect-ratio:auto;overflow:visible">
+ <div style="display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:9px;color:#88A8B2;letter-spacing:.08em;text-transform:uppercase"><i class="fas fa-file-alt" style="color:var(--teal)"></i>Q2_Emissions_Summary.docx</div>
+ <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:5px">
+ <div style="height:6px;width:90%;background:rgba(255,255,255,.12);border-radius:3px"></div>
+ <div style="height:6px;width:75%;background:rgba(255,255,255,.12);border-radius:3px"></div>
+ <div style="height:6px;width:82%;background:rgba(255,255,255,.12);border-radius:3px"></div>
+ <div style="height:6px;width:60%;background:rgba(84,142,155,.4);border-radius:3px"></div>
+ </div>
+ <div class="ph-label" style="position:static">Draft: Q2 emissions summary</div>
  </div>
  </div>
  </div>

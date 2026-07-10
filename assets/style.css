@@ -1009,11 +1009,11 @@ p  { margin: 0; }
 .rel-card a { margin-top: auto; color: var(--teal-600); font-weight: 600; display: inline-flex; gap: 8px; align-items: center; font-size: 13px; }
 
 /* ---- Pipeline call-out (on solution page) ---- */
-.pipe-callout { background: var(--ink); border-radius: 18px; padding: 36px; color: #DCEFEC; }
+.pipe-callout { background: var(--ink); border-radius: 18px; padding: 36px; color: #DCEFEC; width: fit-content; max-width: 100%; margin-inline: auto; }
 .pipe-callout .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .15em; color: var(--teal); text-transform: uppercase; }
 .pipe-callout h3 { color: #fff; margin-top: 8px; font-size: 22px; }
-.pipe-callout .row { margin-top: 24px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; align-items: center; }
-.pipe-callout .node { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 10px; padding: 14px 12px; text-align: center; }
+.pipe-callout .row { margin-top: 24px; display: grid; grid-template-columns: repeat(11, auto); justify-content: center; gap: 8px; align-items: center; }
+.pipe-callout .node { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 10px; padding: 16px 14px; text-align: center; }
 .pipe-callout .node.active { background: var(--teal); color: #062F41; border-color: var(--teal); }
 .pipe-callout .node.active small { color: #06354B; }
 .pipe-callout .node small { display: block; font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; color: #88A8B2; text-transform: uppercase; }
@@ -1232,7 +1232,7 @@ p  { margin: 0; }
 
   /* Pipe callout */
   .pipe-callout .row { grid-template-columns: 1fr; }
-  .pipe-callout { padding: 24px; }
+  .pipe-callout { padding: 24px; width: 100%; }
 
   /* Page-level hero (solution / product pages) */
   .page-hero .container { padding-block: 48px; gap: 28px; }
